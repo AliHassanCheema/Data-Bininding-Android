@@ -1,5 +1,6 @@
 package com.example.databindingpractice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding.title.text = "Hello Ali! Welcome to CHI"
         binding.submitBtn.setOnClickListener{
             binding.title.text = binding.editText.text
+            intent = Intent(this, SecondActivity ::class.java)
+            startActivity(intent)
         }
     }
 }
